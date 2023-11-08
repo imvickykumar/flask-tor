@@ -1,8 +1,8 @@
 from flask import Flask
-# from flask_tor import run_with_tor
+from flask_tor import run_with_tor
 
 app = Flask(__name__)
-# port = run_with_tor()
+port = run_with_tor()
 
 @app.route("/")
 def hello():
@@ -10,5 +10,5 @@ def hello():
 
 if __name__ == '__main__':
     app.run(debug=True,
-            # port=port,
+            port=port,
             )
